@@ -3,7 +3,7 @@ include("config.php");
 ?>
 <html>
     <head>
-        <title>Foscam Cameras</title>
+        <title>Security Cameras</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
