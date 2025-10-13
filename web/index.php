@@ -32,12 +32,15 @@ include("config.php");
             spanToMove.parentNode.appendChild(spanToMove.parentNode.replaceChild(spans[spans.length-1], spanToMove));
         }
         </script>
+	<style>
+		body { background-color:black; color: white; }
+	</style>
     </head>
     <body>
     <table width=100% height=100% border=0 cellpadding=0 cellspacing=0>
     <tr>
     <td width=100% height=100% align="center" valign="middle">
-        <h1><img src="icon.png"><br>Foscam Cameras</h1>
+        <h1><img src="icon.png" valign="middle" style="vertical-align:top;margin-top:4px;height:32px"> Security Cameras</h1>
         <div id="container">
         <?php
         $files = glob('*.{jpg}', GLOB_BRACE);

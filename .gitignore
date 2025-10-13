@@ -1,3 +1,4 @@
 config.sh
 web/cam-*.jpg
 web/config.php
+.DS_Store
