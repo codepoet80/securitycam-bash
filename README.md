@@ -1,12 +1,12 @@
-# foscam-bash
+# securitycam-bash
 
 ![App Icon](web/icon.png)
 
-Loosely derived from my [kunacam-php](https://github.com/codepoet80/kunacam-php) project, this is a super quick-and-dirty solution for publishing still frames from Foscam HD web cams to a webpage.
+Loosely derived from my [kunacam-php](https://github.com/codepoet80/kunacam-php) project, this is a super quick-and-dirty solution for publishing still frames from any RTSP-enabled web cams to a webpage.
 
-It depends on a bash script, that you must edit, scheduled by a cronjob, that you must create, on a schedule you define.
+It depends on a bash script, driven by a config file that you must edit, scheduled by a cronjob, that you must create, on a schedule you define.
 
-It assumes you have your own web-server and can create a symlink or virtual directory pointing to the `web` subdirectory in this project. **Do not point your web server to the root of this project, doing so will expose your camera credentials to clients!**
+It assumes you have your own web-server and can create a symlink or virtual directory pointing to the `web` subdirectory in this project. **Do not point your web server to the root of this project, doing so will expose your camera RTSP URLs to clients!**
 
 ## Server Requirements
 
@@ -17,7 +17,7 @@ Tested with nginx and apache2, with the following installed:
 
 ## Client Requirements
 
-Pretty much any browser in the past 10 years. Tested on Chrome and Firefox. Also tested on webOS and Android browsers.
+Pretty much any browser in the past 15 years. Tested on Chrome and Firefox. Also tested on webOS and Android browsers.
 
 ## Setup
 
