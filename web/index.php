@@ -8,6 +8,12 @@ include("config.php");
         <link rel="stylesheet" href="style.css">
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
         <link rel="icon" href="favicon.ico" type="image/x-icon">
+        <link rel="manifest" href="manifest.json">
+        <meta name="theme-color" content="#000000">
+        <meta name="apple-mobile-web-app-capable" content="yes">
+        <meta name="apple-mobile-web-app-status-bar-style" content="black">
+        <meta name="apple-mobile-web-app-title" content="Cameras">
+        <link rel="apple-touch-icon" href="icon-256.png">
         <script>
         var rate = <?php echo $config['refresh'];?>;
         function imgReady(self) {
@@ -30,6 +36,9 @@ include("config.php");
             var spanToMove = document.getElementById("span-" + self.id);
             var spans = document.getElementsByTagName("span");
             spanToMove.parentNode.appendChild(spanToMove.parentNode.replaceChild(spans[spans.length-1], spanToMove));
+        }
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('sw.js');
         }
         </script>
 	<style>
