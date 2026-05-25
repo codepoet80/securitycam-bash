@@ -53,6 +53,7 @@ include("config.php");
         <div id="container">
         <?php
         $files = glob('*.{jpg}', GLOB_BRACE);
+		natsort($files);
         $c = 0;
         foreach($files as $file) {
             $this_img = $file;
