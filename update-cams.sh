@@ -10,7 +10,8 @@ else
         echo "Updating $camLength cams..."
         for (( i=0; i<${camLength}; i++ ));
         do
-                tempFile=$(mktemp).jpg
+                tempFile=$(mktemp --suffix=.jpg)
+                trap 'rm -f "$tempFile"' EXIT
                 outFile=$SCRIPT_DIR/web/cam-$i.jpg
                 echo
                 echo "Saving to: $outFile"
@@ -19,5 +20,6 @@ else
                 command=${command/CAMIMG/"$tempFile"}
                 $command
                 mv -f $tempFile $outFile
+                trap - EXIT
         done
 fi
