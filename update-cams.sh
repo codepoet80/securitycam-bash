@@ -11,6 +11,7 @@ else
         for (( i=0; i<${camLength}; i++ ));
         do
                 tempFile=$(mktemp --suffix=.jpg)
+                rm -f "$tempFile"
                 trap 'rm -f "$tempFile"' EXIT
                 outFile=$SCRIPT_DIR/web/cam-$i.jpg
                 echo
