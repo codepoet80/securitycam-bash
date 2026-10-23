@@ -33,6 +33,6 @@ Pretty much any browser in the past 15 years. Tested on Chrome and Firefox. Also
 - Schedule `update-cams.sh` to run as you see fit via `cron` (or some other mechanism)
 
 - Create a symlink or virtual directory in your web server of choice to point to the `web` subfolder in this project.
-  - For Pi-hole v6, which serves files from `/var/www/html`: `sudo ln -s /path/to/securitycam-bash/web /var/www/html/cams`. The web server runs as the `pihole` user, so it needs read access along the whole path -- if the project is in your home folder, you may need `chmod o+x ~`
+  - For Pi-hole v6, which serves files from `/var/www/html`: `sudo ln -s /path/to/securitycam-bash/web /var/www/html/cams`. By default Pi-hole only serves its own admin pages, so you also need to enable serving other files with `sudo pihole-FTL --config webserver.serve_all true`. The web server runs as the `pihole` user, so it needs read access along the whole path -- if the project is in your home folder, you may need `chmod o+x ~`
 
 - View your created path in a web browser
